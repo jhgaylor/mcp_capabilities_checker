@@ -11,6 +11,8 @@ This tool connects to an MCP server and retrieves information about its capabili
 
 The output is presented in YAML format, either to stdout or a specified file.
 
+> **Note:** Currently, the tool only connects to MCP servers via stdio. Support for SSE/HTTP connections is planned for future development.
+
 ## Installation
 
 ### Using uv (recommended)
