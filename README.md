@@ -13,6 +13,8 @@ The output is presented in YAML format, either to stdout or a specified file.
 
 > **Note:** Currently, the tool only connects to MCP servers via stdio. Support for SSE/HTTP connections is planned for future development.
 
+> **Note:** This application is itself an MCP client and can be used to "ping" MCP servers to verify they are operational and inspect their capabilities.
+
 ## Installation
 
 ### Using uv (recommended)
