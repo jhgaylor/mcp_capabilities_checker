@@ -51,29 +51,40 @@ mcp-capabilities-checker python my_mcp_server.py --output capabilities.yaml
 
 ```yaml
 serverName: ExampleServer
-serverVersion: 1.0.0
+serverVersion: 1.6.0
 serverCapabilities:
   prompts: true
   resources: true
   tools: true
 prompts:
-  - name: example-prompt
+  prompts:
+  - name: example_prompt
     description: An example prompt template
     arguments:
-      - name: arg1
-        description: Example argument
-        required: true
+    - name: arg1
+      description: null
+      required: true
 resources:
-  - uri: file://example
-    title: Example Resource
-    description: An example resource
+  resources:
+  - uri: file://example/
+    name: file://example/
+    description: null
+    mimeType: text/plain
+    size: null
+    annotations: null
 tools:
-  - name: example-tool
+  tools:
+  - name: example_tool
     description: An example tool
-    arguments:
-      - name: arg1
-        description: Example argument
-        required: true
+    inputSchema:
+      properties:
+        arg1:
+          title: Arg1
+          type: string
+      required:
+      - arg1
+      title: example_toolArguments
+      type: object
 ```
 
 ## Development
